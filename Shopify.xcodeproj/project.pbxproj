@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9DC87BF1224F1A1A003DDE9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87BF0224F1A1A003DDE9F /* AppDelegate.swift */; };
-		9DC87BF3224F1A1A003DDE9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87BF2224F1A1A003DDE9F /* ViewController.swift */; };
+		9DC87BF3224F1A1A003DDE9F /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87BF2224F1A1A003DDE9F /* CollectionsViewController.swift */; };
 		9DC87BF6224F1A1A003DDE9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC87BF4224F1A1A003DDE9F /* Main.storyboard */; };
 		9DC87BF8224F1A1C003DDE9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC87BF7224F1A1C003DDE9F /* Assets.xcassets */; };
 		9DC87BFB224F1A1C003DDE9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC87BF9224F1A1C003DDE9F /* LaunchScreen.storyboard */; };
 		9DC87C03224F2974003DDE9F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C02224F2974003DDE9F /* NetworkRequest.swift */; };
 		9DC87C0B224F3293003DDE9F /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C0A224F3293003DDE9F /* Collections.swift */; };
 		9DC87C0D224F70F6003DDE9F /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C0C224F70F6003DDE9F /* CollectionTableViewCell.swift */; };
+		9DC87C0F224F7BD9003DDE9F /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C0E224F7BD9003DDE9F /* ProductTableViewCell.swift */; };
+		9DC87C11224F7BF1003DDE9F /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C10224F7BF1003DDE9F /* Products.swift */; };
+		9DC87C13224F7E19003DDE9F /* CollectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C12224F7E19003DDE9F /* CollectionDetailsViewController.swift */; };
+		9DC87C152250A937003DDE9F /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C142250A937003DDE9F /* ProductDetail.swift */; };
+		9DC87C172250AB2A003DDE9F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C162250AB2A003DDE9F /* ArrayExtension.swift */; };
 		DAB4C4B4ACFFD2E88928589C /* Pods_Shopify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C02B5299B8F6B14859B67EC /* Pods_Shopify.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +28,7 @@
 		65C6AFC905557FC8ED01778F /* Pods-Shopify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify/Pods-Shopify.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC87BED224F1A1A003DDE9F /* Shopify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC87BF0224F1A1A003DDE9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DC87BF2224F1A1A003DDE9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DC87BF2224F1A1A003DDE9F /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		9DC87BF5224F1A1A003DDE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DC87BF7224F1A1C003DDE9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DC87BFA224F1A1C003DDE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +36,11 @@
 		9DC87C02224F2974003DDE9F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		9DC87C0A224F3293003DDE9F /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		9DC87C0C224F70F6003DDE9F /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		9DC87C0E224F7BD9003DDE9F /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		9DC87C10224F7BF1003DDE9F /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		9DC87C12224F7E19003DDE9F /* CollectionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailsViewController.swift; sourceTree = "<group>"; };
+		9DC87C142250A937003DDE9F /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
+		9DC87C162250AB2A003DDE9F /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		DAC1DBEDD91413FBF8D80402 /* Pods-Shopify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify/Pods-Shopify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC87BF0224F1A1A003DDE9F /* AppDelegate.swift */,
+				9DC87C182250AB32003DDE9F /* Extension */,
 				9DC87C09224F3272003DDE9F /* Networking */,
 				9DC87C06224F321F003DDE9F /* Controller */,
 				9DC87C05224F320E003DDE9F /* View */,
@@ -92,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				9DC87C0A224F3293003DDE9F /* Collections.swift */,
+				9DC87C10224F7BF1003DDE9F /* Products.swift */,
+				9DC87C142250A937003DDE9F /* ProductDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC87C0C224F70F6003DDE9F /* CollectionTableViewCell.swift */,
+				9DC87C0E224F7BD9003DDE9F /* ProductTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,7 +121,8 @@
 		9DC87C06224F321F003DDE9F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9DC87BF2224F1A1A003DDE9F /* ViewController.swift */,
+				9DC87BF2224F1A1A003DDE9F /* CollectionsViewController.swift */,
+				9DC87C12224F7E19003DDE9F /* CollectionDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,6 +133,14 @@
 				9DC87C02224F2974003DDE9F /* NetworkRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		9DC87C182250AB32003DDE9F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9DC87C162250AB2A003DDE9F /* ArrayExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DFE29A75AEC14CAAE99BE318 /* Pods */ = {
@@ -242,10 +265,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DC87C0D224F70F6003DDE9F /* CollectionTableViewCell.swift in Sources */,
-				9DC87BF3224F1A1A003DDE9F /* ViewController.swift in Sources */,
+				9DC87C13224F7E19003DDE9F /* CollectionDetailsViewController.swift in Sources */,
+				9DC87C152250A937003DDE9F /* ProductDetail.swift in Sources */,
+				9DC87BF3224F1A1A003DDE9F /* CollectionsViewController.swift in Sources */,
 				9DC87C03224F2974003DDE9F /* NetworkRequest.swift in Sources */,
+				9DC87C172250AB2A003DDE9F /* ArrayExtension.swift in Sources */,
+				9DC87C11224F7BF1003DDE9F /* Products.swift in Sources */,
 				9DC87BF1224F1A1A003DDE9F /* AppDelegate.swift in Sources */,
 				9DC87C0B224F3293003DDE9F /* Collections.swift in Sources */,
+				9DC87C0F224F7BD9003DDE9F /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

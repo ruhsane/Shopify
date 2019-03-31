@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class CollectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var collectionsTableView: UITableView!
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.collectionsTableView.dequeueReusableCell(withIdentifier: "collection", for: indexPath) as! CollectionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "collection", for: indexPath) as! CollectionTableViewCell
         
         // Configure the cell...
         cell.collectionName.text = collections[indexPath.row].title
@@ -52,4 +52,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let collection = collections[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let productView = storyboard.instantiateViewController(withIdentifier: "collectionDetail") as? CollectionDetailsViewController else {
+            return
+        }
+        productView.collectionID = collection.id
+        navigationController?.pushViewController(productView, animated: true)
+    }
 }
