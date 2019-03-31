@@ -13,13 +13,7 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
     
     var collectionID: Int!
     
-    var products: [Int] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.getProductDetail()
-            }
-        }
-    }
+    var products: [Int] = []
     
     var productDetail = [ProductDetails]() {
         didSet {
@@ -45,6 +39,8 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
                     let products = Products(dict: entry)
                     self.products.append((products?.product_id)!)
                 }
+                self.getProductDetail()
+
             }
         }
     }
@@ -68,7 +64,7 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Products", for: indexPath) as! ProductTableViewCell
-        
+
         // Configure the cell...
         cell.productName.text = productDetail[indexPath.row].name
         cell.totalQuantity.text = "\(productDetail[indexPath.row].quantities) available"
