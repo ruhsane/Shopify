@@ -47,6 +47,8 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
     
     func getProductDetail() {
         NetworkRequest().fetchProductDetails(products: products) { (responseObj) in
+            //got the data, remove the loading spinner from view
+            self.removeSpinner()
             print(responseObj)
             if let results = responseObj["products"] as? [[String: Any]] {
                 for entry in results {
@@ -67,7 +69,7 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
 
         // Configure the cell...
         cell.productName.text = productDetail[indexPath.row].name
-        cell.totalQuantity.text = "\(productDetail[indexPath.row].quantities) available"
+        cell.totalQuantity.text = "✔️ \(productDetail[indexPath.row].quantities) Available "
         
         let urlString = productDetail[indexPath.row].image
         let url = URL(string: urlString)!

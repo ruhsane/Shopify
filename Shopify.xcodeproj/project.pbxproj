@@ -20,6 +20,7 @@
 		9DC87C13224F7E19003DDE9F /* CollectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C12224F7E19003DDE9F /* CollectionDetailsViewController.swift */; };
 		9DC87C152250A937003DDE9F /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C142250A937003DDE9F /* ProductDetail.swift */; };
 		9DC87C172250AB2A003DDE9F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C162250AB2A003DDE9F /* ArrayExtension.swift */; };
+		9DC87C1C2252D210003DDE9F /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC87C1B2252D210003DDE9F /* VCExtension.swift */; };
 		DAB4C4B4ACFFD2E88928589C /* Pods_Shopify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C02B5299B8F6B14859B67EC /* Pods_Shopify.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		9DC87C12224F7E19003DDE9F /* CollectionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailsViewController.swift; sourceTree = "<group>"; };
 		9DC87C142250A937003DDE9F /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		9DC87C162250AB2A003DDE9F /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		9DC87C1B2252D210003DDE9F /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		DAC1DBEDD91413FBF8D80402 /* Pods-Shopify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify/Pods-Shopify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC87C162250AB2A003DDE9F /* ArrayExtension.swift */,
+				9DC87C1B2252D210003DDE9F /* VCExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				9DC87C0D224F70F6003DDE9F /* CollectionTableViewCell.swift in Sources */,
 				9DC87C13224F7E19003DDE9F /* CollectionDetailsViewController.swift in Sources */,
+				9DC87C1C2252D210003DDE9F /* VCExtension.swift in Sources */,
 				9DC87C152250A937003DDE9F /* ProductDetail.swift in Sources */,
 				9DC87BF3224F1A1A003DDE9F /* CollectionsViewController.swift in Sources */,
 				9DC87C03224F2974003DDE9F /* NetworkRequest.swift in Sources */,

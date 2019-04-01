@@ -60,6 +60,16 @@ class CollectionsViewController: UIViewController, UITableViewDataSource, UITabl
             return
         }
         productView.collectionID = collection.id
+        
+        // show loading spinner until getting the data for the specific collection
+        self.showSpinner(onView: productView.view)
+    
         navigationController?.pushViewController(productView, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
+
 }
