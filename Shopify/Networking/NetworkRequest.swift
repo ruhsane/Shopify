@@ -20,7 +20,7 @@ class NetworkRequest {
             let request = URLRequest(url: url)
             
             // Create Data Task
-            let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if let data = data {
                     do {
                         let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
@@ -29,8 +29,7 @@ class NetworkRequest {
                         print("JSON error: \(error.localizedDescription)")
                     }
                 }
-            })
-            dataTask.resume()
+            }).resume()
             
         }
     }
@@ -44,7 +43,7 @@ class NetworkRequest {
             let request = URLRequest(url: url)
             
             // Create Data Task
-            let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if let data = data {
                     do {
                         let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
@@ -53,8 +52,7 @@ class NetworkRequest {
                         print("JSON error: \(error.localizedDescription)")
                     }
                 }
-            })
-            dataTask.resume()
+            }).resume()
             
         }
     }
@@ -68,7 +66,7 @@ class NetworkRequest {
             let request = URLRequest(url: url)
             
             // Create Data Task
-            let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if let data = data {
                     do {
                         let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
@@ -77,8 +75,7 @@ class NetworkRequest {
                         print("JSON error: \(error.localizedDescription)")
                     }
                 }
-            })
-            dataTask.resume()
+            }).resume()
             
         }
     }

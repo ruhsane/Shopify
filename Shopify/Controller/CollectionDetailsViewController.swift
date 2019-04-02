@@ -18,6 +18,7 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
     var productDetail = [ProductDetails]() {
         didSet {
             DispatchQueue.main.async {
+                // reload the table view with new datas when product details are retrieved
                 self.productsTableView.reloadData()
             }
         }
@@ -25,20 +26,23 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         getProductsList()
+        
         productsTableView.delegate = self
         productsTableView.dataSource = self
     }
     
     func getProductsList() {
+        // fetch products list for the specific collection
         NetworkRequest().fetchProducts(collectionID: collectionID) { (responseObj) in
-            print(responseObj)
             if let results = responseObj["collects"] as? [[String: Any]] {
                 for entry in results {
+                    // add every products' IDs onto products array
                     let products = Products(dict: entry)
                     self.products.append((products?.product_id)!)
                 }
+                // after getting the full list of products, get the product detail for each
                 self.getProductDetail()
 
             }
@@ -49,9 +53,9 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
         NetworkRequest().fetchProductDetails(products: products) { (responseObj) in
             //got the data, remove the loading spinner from view
             self.removeSpinner()
-            print(responseObj)
             if let results = responseObj["products"] as? [[String: Any]] {
                 for entry in results {
+                    // add product details onto an array
                     let product = ProductDetails(dict: entry)
                     self.productDetail.append(product!)
                 }
@@ -61,21 +65,23 @@ class CollectionDetailsViewController: UIViewController, UITableViewDelegate, UI
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // cell count = product count
         return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // Configure the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "Products", for: indexPath) as! ProductTableViewCell
-
-        // Configure the cell...
         cell.productName.text = productDetail[indexPath.row].name
         cell.totalQuantity.text = "✔️ \(productDetail[indexPath.row].quantities) Available "
         
+        // get specific image for each cell
         let urlString = productDetail[indexPath.row].image
         let url = URL(string: urlString)!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                print("Failed fetching image:", error)
+                print("Failed fetching image:", error!)
                 return
             }
             

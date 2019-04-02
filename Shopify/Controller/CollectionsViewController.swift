@@ -15,6 +15,7 @@ class CollectionsViewController: UIViewController, UITableViewDataSource, UITabl
     var collections = [Collections]() {
         didSet {
             DispatchQueue.main.async {
+                // when collections are updated, reload the table view with new datas
                 self.collectionsTableView.reloadData()
             }
         }
@@ -44,21 +45,23 @@ class CollectionsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Configure the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "collection", for: indexPath) as! CollectionTableViewCell
-        
-        // Configure the cell...
         cell.collectionName.text = collections[indexPath.row].title
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // get which collection is selected
         let collection = collections[indexPath.row]
         
+        // present detail page for the selected collection
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let productView = storyboard.instantiateViewController(withIdentifier: "collectionDetail") as? CollectionDetailsViewController else {
             return
         }
+        // pass in the collectionID for the selected collection to the detailed page
         productView.collectionID = collection.id
         
         // show loading spinner until getting the data for the specific collection

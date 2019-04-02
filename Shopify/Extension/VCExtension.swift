@@ -9,13 +9,11 @@
 import Foundation
 import UIKit
 
-/*
- Spinner to show loading state when making network request
- */
-
 var vSpinner : UIView?
 
 extension UIViewController {
+    
+    // Spinner to show loading state when making network request
     func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -31,6 +29,7 @@ extension UIViewController {
         vSpinner = spinnerView
     }
     
+    // to remove spinner when done making network request
     func removeSpinner() {
         DispatchQueue.main.async {
             vSpinner?.removeFromSuperview()

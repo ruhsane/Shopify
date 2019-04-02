@@ -9,6 +9,8 @@
 import Foundation
 
 extension Array {
+    // join elements in an array with a comma and make it into string
+    // used to pass into url
     var joinWithComma: String {
         return map { "\($0)" }.joined(separator: ",")
     }
