@@ -11,12 +11,7 @@ import UIKit
 class CollectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionName: UILabel!
-        
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
-    }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
